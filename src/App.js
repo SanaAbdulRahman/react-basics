@@ -6,33 +6,16 @@
 //import { Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import States from "./components/States";
 
-// Props sample
+
+// Conditional rendering - ternary operator (? :) sample
 
 function App() {
-  const states = [
-    {
-      name: "Kerala", language: "Malayalam", population: 1000
-    },
-    {
-      name: "Tamil Nadu", language: "Tamil", population: 2000
-    },
-    {
-      name: "Karnataka", language: "Kannada", population: 3000
-    },
-    {
-      name: "Andhrapradesh", language: "Telugu", population: 4000
-    },
-    {
-      name: "Maharashtra", language: "Marathi", population: 5000
-    },
-  ]
-
+  let number = 0;
   return (
 
     <>
-      <States states={states} />
+      {number > 0 ? <h1>Positive number </h1> : number < 0 ? <h1>Negative number</h1> : <h1>Zero</h1>}
     </>
   );
 
